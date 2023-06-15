@@ -5,8 +5,8 @@
   "source": "index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build",
-    "sass": "node-sass ./ -o css/"
+    "build": "parcel build --public-url ./",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "author": "",
   "license": "ISC",
