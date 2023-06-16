@@ -506,12 +506,30 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
+.ordering-form .email-input {
+  margin: 0 30px;
+}
+@media (max-width: 1216px) {
+  .ordering-form .name-input {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 846px) {
+  .ordering-form .email-input {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .ordering-form .email-input {
+    margin: 30px 0 0;
+  }
+}
 .ordering-form__input {
   width: 100%;
   max-width: 370px;
   padding: 12px 10px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgb(221, 221, 223);
   border: 1px solid #ffffff;
   font-weight: 400;
   font-size: 18px;
@@ -522,34 +540,30 @@
 .ordering-form__input::-webkit-input-placeholder {
   color: #272733;
 }
-.ordering-form__input::-moz-placeholder {
-  color: #272733;
-}
 .ordering-form__input:-ms-input-placeholder {
   color: #272733;
 }
-.ordering-form__input::-ms-input-placeholder {
-  color: #272733;
-}
-.ordering-form__input::placeholder {
+.ordering-form__input::-moz-placeholder {
   color: #272733;
 }
 .ordering .select {
   position: relative;
   width: 100%;
   max-width: 370px;
+  top: -2px;
 }
 .ordering .select-toggle {
   display: none;
 }
 .ordering .select-native, .ordering .select-custom {
   position: relative;
-  border: 1px solid #ffffff;
   border-radius: 3px;
 }
 .ordering .select-custom {
   position: absolute;
-  display: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
   top: 0;
   left: 0;
 }
@@ -566,12 +580,13 @@
 }
 .ordering .select-custom.isActive .select-elem__options {
   visibility: visible;
+  top: 44px;
   opacity: 1;
 }
 .ordering .select-native {
-  padding: 12px 10px;
-  border: none;
+  padding: 8px 10px;
   border-radius: 3px;
+  -moz-transition: border-radius 0.2s ease, color 0.2s ease;
   -webkit-transition: border-radius 0.2s ease, color 0.2s ease;
   -o-transition: border-radius 0.2s ease, color 0.2s ease;
   transition: border-radius 0.2s ease, color 0.2s ease;
@@ -580,7 +595,7 @@
   width: 100%;
 }
 .ordering .select-elem__title {
-  padding: 12px 10px;
+  padding: 13px 10px;
   text-align: left;
   -webkit-transition: border-radius 0.2s ease;
   -o-transition: border-radius 0.2s ease;
@@ -636,11 +651,11 @@
 .ordering .select-elem__options::-webkit-scrollbar {
   width: 7px;
   background-color: #3D4050;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .ordering .select-elem__options::-webkit-scrollbar-thumb {
   background: #43ABF0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .ordering .select-native, .ordering .select-elem__title {
   border-radius: 3px;
@@ -648,7 +663,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  color: #272733;
+  color: #3D4050;
   background: rgb(221, 221, 223);
   cursor: pointer;
 }

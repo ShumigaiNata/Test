@@ -17,6 +17,7 @@ customBlock.addEventListener("click", (e) => {
 // Открытие/закрытие кастомного селекта
 function openCustomSel() {
     customSel.classList.add("isActive");
+
     document.addEventListener("click", closeOutsideWindow);
 }
 // Закрытие кастомного селекта

@@ -196,16 +196,32 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
-    //.email-input {
-    //  margin: 0 30px;
-    //}
+    .email-input {
+      margin: 0 30px;
+    }
+
+    @media (max-width: 1216px) {
+      .name-input {
+        margin-top: 30px;
+      }
+    }
+    @media (max-width: 846px) {
+      .email-input {
+        margin-top: 30px;
+      }
+    }
+    @media (max-width: 480px) {
+      .email-input {
+        margin: 30px 0 0;
+      }
+    }
 
     &__input {
       width: 100%;
       max-width: 370px;
       padding: 12px 10px;
       border-radius: 3px;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgb(221, 221, 223);
       border: 1px solid $white;
       font-weight: 400;
       font-size: $p2;
@@ -218,28 +234,22 @@
       color: $darkblue;
     }
 
-    &__input::-moz-placeholder {
-      color: $darkblue;
-    }
-
     &__input:-ms-input-placeholder {
       color: $darkblue;
     }
 
-    &__input::-ms-input-placeholder {
-      color: $darkblue;
-    }
-
-    &__input::placeholder {
+    &__input::-moz-placeholder {
       color: $darkblue;
     }
   }
 
   //----------------------------Селект---------------------------------
+
   .select {
     position: relative;
     width: 100%;
     max-width: 370px;
+    top: -2px;
 
     &-toggle {
       display: none;
@@ -248,13 +258,14 @@
     &-native,
     &-custom {
       position: relative;
-      border: 1px solid $white;
       border-radius: 3px;
     }
 
     &-custom {
       position: absolute;
-      display: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
       top: 0;
       left: 0;
 
@@ -274,25 +285,26 @@
 
       &.isActive .select-elem__options {
         visibility: visible;
+        top: 44px;
         opacity: 1;
-
       }
     }
 
     &-native {
-      padding: 12px 10px;
-      border: none;
+      padding: 8px 10px;
       border-radius: 3px;
+      -moz-transition: border-radius .2s ease, color 0.2s ease;
       -webkit-transition: border-radius .2s ease, color 0.2s ease;
       -o-transition: border-radius .2s ease, color 0.2s ease;
       transition: border-radius .2s ease, color 0.2s ease;
     }
 
+
     &-elem {
       width: 100%;
 
       &__title {
-        padding: 12px 10px;
+        padding: 13px 10px;
         text-align: left;
         -webkit-transition: border-radius .2s ease;
         -o-transition: border-radius .2s ease;
@@ -354,12 +366,12 @@
       &__options::-webkit-scrollbar {
         width: 7px;
         background-color: $slategrey;
-        border-radius: 10px;
+        border-radius: 5px;
       }
 
       &__options::-webkit-scrollbar-thumb {
         background: $blue;
-        border-radius: 10px;
+        border-radius: 5px;
       }
     }
 
@@ -370,7 +382,7 @@
       font-weight: 400;
       font-size: $p2;
       line-height: $lh5;
-      color: $darkblue;
+      color: $slategrey;
       background: rgb(221, 221, 223);
       cursor: pointer;
     }
