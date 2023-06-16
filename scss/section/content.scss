@@ -64,7 +64,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 30px;
     @media (max-width: 820px) {
       padding: 80px 0 90px;
     }
@@ -80,6 +79,10 @@
       color: $white;
       background: $blue;
       border: 1px solid $white;
+      margin-right: 30px;
+      @media (max-width: 459px) {
+        margin-bottom: 30px;
+      }
     }
 
     & button:last-child {

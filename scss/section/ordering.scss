@@ -131,6 +131,7 @@
       &-first::before {
         left: 125%;
       }
+
       &-last::after {
         right: 118%;
       }
@@ -194,7 +195,10 @@
     align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    gap: 30px;
+
+    //.email-input {
+    //  margin: 0 30px;
+    //}
 
     &__input {
       width: 100%;
@@ -244,6 +248,8 @@
     &-native,
     &-custom {
       position: relative;
+      border: 1px solid $white;
+      border-radius: 3px;
     }
 
     &-custom {
@@ -253,14 +259,11 @@
       left: 0;
 
       &.isActive .select-elem__title {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
         color: $white;
         background: $slategrey;
       }
 
       &.isActive .select-elem__title::after {
-        -webkit-transform: translateY(-50%) rotate(0deg);
         -ms-transform: translateY(-50%) rotate(0deg);
         transform: translateY(-50%) rotate(0deg);
       }
@@ -272,13 +275,14 @@
       &.isActive .select-elem__options {
         visibility: visible;
         opacity: 1;
+
       }
     }
 
     &-native {
-      padding: 11px 10px;
+      padding: 12px 10px;
       border: none;
-      border-radius: 5px;
+      border-radius: 3px;
       -webkit-transition: border-radius .2s ease, color 0.2s ease;
       -o-transition: border-radius .2s ease, color 0.2s ease;
       transition: border-radius .2s ease, color 0.2s ease;
@@ -297,14 +301,12 @@
 
       &__title::after {
         background: url("../img/down.svg") center no-repeat;
-        -webkit-transform: translateY(-50%) rotate(360deg);
         -ms-transform: translateY(-50%) rotate(360deg);
         transform: translateY(-50%) rotate(360deg);
         -webkit-transition: -webkit-transform .2s ease;
         transition: -webkit-transform .2s ease;
         -o-transition: transform .2s ease;
         transition: transform .2s ease;
-        transition: transform .2s ease, -webkit-transform .2s ease;
         position: absolute;
         content: '';
         right: 16px;
@@ -363,7 +365,6 @@
 
     &-native,
     &-elem__title {
-      border: 1px solid $slategrey;
       border-radius: 3px;
       width: 100%;
       font-weight: 400;
@@ -392,7 +393,6 @@
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    gap: 30px;
     @media (max-width: 1325px) {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -413,8 +413,12 @@
   &-percent {
     width: 100%;
     max-width: 770px;
+    margin-right: 30px;
+    @media (max-width: 1325px) {
+      margin: 0 0 30px 0;
+    }
     @media (max-width: 820px) {
-      width: 80%;
+      width: 100%;
       max-width: 460px;
     }
 
@@ -441,7 +445,7 @@
       position: relative;
       height: 5px;
       border-radius: 4px;
-      background: rgba(255, 255, 255, 0.7);
+      background: $lightgrey;
       border: 1px solid #FFFFFF;
 
       &-mark {
@@ -462,18 +466,21 @@
     width: 100%;
     max-width: 370px;
     position: relative;
+    border: 1px solid $blue;
+    border-radius: 3px;
 
     &__file {
       opacity: 0;
       visibility: hidden;
       position: absolute;
       width: 100px;
+
     }
 
     &__button {
       width: 100%;
       max-width: 368px;
-      background: rgba(255, 255, 255, 0.85);
+      background: $lightgrey;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -483,7 +490,7 @@
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      border-radius: 4px;
+      border-radius: 2px;
       cursor: pointer;
 
       &-span {
@@ -513,6 +520,9 @@
   //------------------------Кнопка ОТПРАВИТЬ------------------------
   &-btn {
     @include btn;
+    font-weight: 600;
+    font-size: $p4;
+    line-height: $lh6;
     margin-top: 46px;
     padding: 15px 0;
     width: 32%;

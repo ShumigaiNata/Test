@@ -11,8 +11,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
-
 }
 html {
   scroll-behavior: smooth;
@@ -33,7 +31,7 @@ html {
   position: relative;
 }
 .ordering {
-  background-image: url("../img/map.svg") no-repeat center/cover $headerBg;
+  background: url("../img/map.svg") no-repeat center/cover $headerBg;
   position: relative;
 }
 span {

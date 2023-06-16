@@ -8,6 +8,7 @@
   top: 0;
   width: 100%;
   z-index: 5;
+  opacity: 0.9;
 
   .wrapper {
     display: -webkit-box;
@@ -39,13 +40,13 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    gap: 60px;
     @media (max-width: 768px) {
       display: none;
     }
   }
 
   & a {
+    margin-left: 60px;
     font-weight: 700;
     font-size: $p5;
     line-height: $lh7;
